@@ -22,14 +22,14 @@ const AddTask = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form>
       <input
         type="text"
         placeholder="Enter new task"
         value={description}
         onChange={(e) => setDescription(e.target.value)}
       />
-      <button type="submit">Add Task</button>
+      <button onClick={handleSubmit}>Add Task</button>
     </form>
   );
 };

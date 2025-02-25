@@ -1,9 +1,10 @@
+import { ADD_TASK, TOGGLE_TASK, EDIT_TASK, FILTER_TASKS } from "./actiontype";
 
 // 1. Add Task
 export const addTask = (newTask) => {
   return {
     type: ADD_TASK,
-    payload: newTask, 
+    payload: newTask,
   };
 };
 
@@ -25,9 +26,8 @@ export const editTask = (taskId, updatedDescription) => {
 
 // 4. Filter Tasks
 export const filterTasks = (filterValue) => {
-  // filterValue can be "done" or "notDone" or "all"
   return {
     type: FILTER_TASKS,
-    payload: filterValue,
+    payload: filterValue, // "done", "notDone", or "all"
   };
 };
